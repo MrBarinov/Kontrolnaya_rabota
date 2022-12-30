@@ -1,15 +1,24 @@
-﻿string[] Mass()
+﻿//Написать программу, которая из имеющегося массива строк формирует 
+//массив из строк, длина которых меньше либо равна 3 символа. 
+//Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
+//При решении не рекомендуется пользоваться коллекциями, лучше обойтись
+//исключительно массивами
+
+string[] arr = { "12", "37", "cat", "moscow", "123" };
+
+void Mass(string[] array)
 {
-    string[] Array = { "12", "37", "cat", "moscow", "123" };
     Console.Write("[");
 
-    for (int i = 0; i < Array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{Array[i]}; ");
+        Console.Write($"{array[i]}; ");
     }
-    Console.Write("]");
-    return Array;
+    Console.Write("]=>");
 }
 
-Mass();
-
+void NewMass(string[] arr)
+{
+    string[] NewArray = new string[5];
+}
+Mass(arr);
