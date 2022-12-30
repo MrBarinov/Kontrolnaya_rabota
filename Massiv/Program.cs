@@ -4,7 +4,7 @@
 //При решении не рекомендуется пользоваться коллекциями, лучше обойтись
 //исключительно массивами
 
-string[] arr = { "12", "37", "cat", "moscow", "123" };
+string[] arr = { "4444", "37", "cat", "moscow", "123" };
 
 void Mass(string[] array)
 {
@@ -12,13 +12,28 @@ void Mass(string[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}; ");
+        Console.Write($"{array[i]}");
+        if (i < array.Length - 1)
+            Console.Write("; ");
     }
-    Console.Write("]=>");
+    Console.Write("] => ");
 }
 
 void NewMass(string[] arr)
 {
-    string[] NewArray = new string[5];
+    string[] NewArray = new string[arr.Length];
+    Console.Write("[");
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            Console.Write($"{NewArray[i] = arr[i]}");
+            if (i < arr.Length - 1)
+                Console.Write("; ");
+        }
+    }
+    Console.Write("]");
 }
 Mass(arr);
+NewMass(arr);
